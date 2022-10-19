@@ -64,7 +64,7 @@ Game::Game(int width, int height) : mState(State::NOT_INITED),
   }
 
   // initialize a font for the application.
-  mFont = TTF_OpenFont("C:/Windows/Fonts/arial.ttf", 28);
+  mFont = TTF_OpenFont("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 28);
   if (mFont == nullptr) {
     std::cerr << "Unable to load font: " << TTF_GetError() << std::endl;
     return;

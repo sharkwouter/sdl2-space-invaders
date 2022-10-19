@@ -44,7 +44,7 @@ void AnimatedEntity::setAnimationFrame(unsigned int frameIndex)
 {
   if (mCurrentAnimation.empty() == false) {
     // ensure that we are not exceeding animation limits.
-    frameIndex = std::min(mCurrentAnimation.size(), frameIndex);
+    frameIndex = std::min((unsigned int)mCurrentAnimation.size(), frameIndex);
 
     // get a reference to the next frame dimensions.
     const auto& animationClip = mCurrentAnimation[frameIndex];
